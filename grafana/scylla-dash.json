@@ -418,6 +418,86 @@
                         ],
                         "title": "Total Storage",
                         "type": "grafana-piechart-panel"
+                    },
+                    {
+                        "aliasColors": {
+
+                        },
+                        "bars": false,
+                        "datasource": "prometheus",
+                        "editable": true,
+                        "error": false,
+                        "fill": 0,
+                        "grid": {
+                            "threshold1": null,
+                            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+                            "threshold2": null,
+                            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+                        },
+                        "id": 333,
+                        "isNew": true,
+                        "legend": {
+                            "avg": false,
+                            "current": false,
+                            "max": false,
+                            "min": false,
+                            "show": false,
+                            "total": false,
+                            "values": false
+                        },
+                        "lines": true,
+                        "linewidth": 2,
+                        "links": [
+
+                        ],
+                        "nullPointMode": "connected",
+                        "percentage": false,
+                        "pointradius": 1,
+                        "points": false,
+                        "renderer": "flot",
+                        "seriesOverrides": [
+
+                        ],
+                        "span": 5,
+                        "stack": false,
+                        "steppedLine": false,
+                        "targets": [
+                            {
+                                "expr": "sum(irate(collectd_storage_proxy_total_operations{type=\"data reads (local Node)\"}[30s]))",
+                                "intervalFactor": 2,
+                                "metric": "",
+                                "refId": "A",
+                                "step": 4
+                            }
+                        ],
+                        "timeFrom": null,
+                        "timeShift": null,
+                        "title": "Read Requests Served",
+                        "tooltip": {
+                            "msResolution": false,
+                            "shared": true,
+                            "value_type": "cumulative"
+                        },
+                        "type": "graph",
+                        "xaxis": {
+                            "show": true
+                        },
+                        "yaxes": [
+                            {
+                                "format": "short",
+                                "logBase": 1,
+                                "max": null,
+                                "min": 0,
+                                "show": true
+                            },
+                            {
+                                "format": "short",
+                                "logBase": 1,
+                                "max": null,
+                                "min": null,
+                                "show": true
+                            }
+                        ]
                     }
                 ],
                 "title": "New row"
